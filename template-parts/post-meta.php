@@ -1,0 +1,2 @@
+<?php /** @package Meridian_News */ ?>
+<div class="post-meta post-meta--full"><span class="post-meta__author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 40 ); ?><?php the_author_posts_link(); ?></span><?php meridian_news_posted_on(); ?><span><?php meridian_news_reading_time(); ?></span><span><?php comments_number( __( 'No comments', 'meridian-news' ), __( '1 comment', 'meridian-news' ), __( '% comments', 'meridian-news' ) ); ?></span></div>

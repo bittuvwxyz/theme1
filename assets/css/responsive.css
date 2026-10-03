@@ -1,0 +1,47 @@
+@media (max-width: 900px) {
+	.card-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.content-with-sidebar, .single-layout { grid-template-columns: 1fr; gap: 3rem; }
+	.sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+	.sidebar-widget { grid-column: span 1; }
+	.site-footer__inner { grid-template-columns: 1fr 1fr; }
+	.site-footer__copyright { grid-column: 1 / -1; }
+	.hero { gap: 2rem; }
+}
+
+@media (max-width: 700px) {
+	.container { width: min(calc(100% - 2rem), var(--max-width)); }
+	.section-space { padding-block: 2.75rem 4rem; }
+	.site-header__inner { min-height: 66px; gap: .25rem; }
+	.menu-toggle { display: block; order: 2; }
+	.search-toggle { order: 3; }
+	.primary-nav { display: none; position: absolute; z-index: 10; top: 66px; right: 0; left: 0; padding: 1.25rem 1rem; border-bottom: 1px solid var(--line); background: var(--paper); }
+	.primary-nav.is-open { display: block; }
+	.primary-nav .menu { display: block; }
+	.primary-nav li + li { margin-top: 1rem; }
+	.primary-nav a { display: inline-block; font-size: .95rem; }
+	.primary-nav .current-menu-item a::after, .primary-nav a:hover::after { bottom: -.15rem; }
+	.hero { grid-template-columns: 1fr; gap: 1.35rem; padding-bottom: 3rem; }
+	.hero__image { order: -1; }
+	.card-grid, .card-grid--three { grid-template-columns: 1fr; gap: 1.25rem; }
+	.post-card { grid-template-columns: 124px 1fr; gap: 1rem; }
+	.post-card__media { align-self: start; }
+	.post-card__content { padding: 0 0 1.15rem; }
+	.post-card__excerpt { display: none; }
+	.post-card__title { font-size: 1.4rem; }
+	.section-heading { align-items: flex-start; flex-wrap: wrap; padding-top: 0; }
+	.section-heading .eyebrow { position: static; width: 100%; margin: 0; }
+	.section-heading h2 { font-size: 2rem; }
+	.sidebar { display: flex; }
+	.post-navigation .nav-links { grid-template-columns: 1fr; }
+	.post-navigation .nav-next { text-align: left; }
+	.site-footer__inner { grid-template-columns: 1fr; }
+	.site-footer__copyright { grid-column: auto; }
+	.author-header { align-items: flex-start; }
+	.search-form { flex-direction: column; }
+	.search-form .button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	*, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

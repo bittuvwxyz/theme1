@@ -1,0 +1,12 @@
+<?php /** @package Meridian_News */ ?>
+<article <?php post_class( 'post-card' ); ?>>
+	<div class="post-card__media">
+		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'meridian-news-card', array( 'loading' => 'lazy' ) ); } else { ?><span class="image-placeholder"></span><?php } ?>
+	</div>
+	<div class="post-card__content">
+		<?php meridian_news_categories(); ?>
+		<h2 class="post-card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<div class="post-card__excerpt"><?php meridian_news_excerpt(); ?></div>
+		<div class="post-meta"><span><?php the_author_posts_link(); ?></span><?php meridian_news_posted_on(); ?></div>
+	</div>
+</article>
